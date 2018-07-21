@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterContentInit } from '@angular/core';
 import { ShoppingService } from './../shopping.service';
 import { Ingredient } from './../../shared/ingredient.model';
 import { NgForm } from "@angular/forms";
@@ -20,6 +20,7 @@ export class ShoppingEditComponent implements OnInit {
   editedItemIndex: number;
   editedItem: Ingredient;
   @ViewChild('f') slForm: NgForm;
+  
 
   constructor(private shoppingService: ShoppingService) { }
 
